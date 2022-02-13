@@ -11,11 +11,52 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-	
-	//template output
-	printf("Jumlah suku harus lebih dari 0!\n");
-	
-	printf("Pendekatan numerik dari e pangkat ... dengan ... suku adalah: ...\n");
-	return 0;
+float factorial(int n)
+{
+  if (n == 0)
+  {
+    return 1;
+  }
+
+  int res = 1;
+  for (int i = n; i > 0; i--)
+  {
+    res = res * i;
+  }
+  return (float)res;
+}
+
+float power(float n, int exp)
+{
+  float res = 1;
+  for (int i = 0; i < exp; i++)
+  {
+    res = res * n;
+  }
+  return res;
+}
+
+int main()
+{
+  int n = 0;
+  float x = 1, res = 0;
+
+  printf("Masukkan jumlah suku: ");
+  scanf("%d", &n);
+  printf("Masukkan nilai x: ");
+  scanf("%f", &x);
+
+  if (n < 1)
+  {
+    printf("Jumlah suku harus lebih dari 0!\n");
+    return 0;
+  }
+
+  for (int i = 0; i < n; i++)
+  {
+    res = res + power(x, i) / factorial(i);
+  }
+
+  printf("Pendekatan numerik dari e pangkat %.8f dengan %d suku adalah: %.8f\n", x, n, res);
+  return 0;
 }
