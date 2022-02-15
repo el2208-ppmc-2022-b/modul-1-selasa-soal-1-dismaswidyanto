@@ -84,7 +84,7 @@
       "name": "9",
       "setup": "make soal-01",
       "run": "./soal-01",
-      "input": "20\r\n2.7",
+      "input": "5\r\n2.7",
       "output": "Pendekatan numerik dari e pangkat 2.70000005 dengan 20 suku adalah: 16.17877960",
       "comparison": "included",
       "timeout": 1,
