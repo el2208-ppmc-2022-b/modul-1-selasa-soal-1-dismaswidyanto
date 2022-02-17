@@ -26,6 +26,15 @@ float factorial(int n)
   return (float)res;
 }
 
+float power(float n, int exp)
+{
+  float res = 1;
+  for (int i = 0; i < exp; i++)
+  {
+    res = res * n;
+  }
+  return res;
+}
 
 
 int main()
